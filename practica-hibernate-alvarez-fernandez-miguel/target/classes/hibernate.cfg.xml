@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:25432/postgres</property> <!-- BD Mane -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+        <property name="hibernate.connection.username">postgres</property> <!-- DB User -->
+        <property name="hibernate.connection.password">2DAMV2425</property> <!-- DB Password -->
+        <property name="hibernate.default_schema">public</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+        <property name="show_sql">false</property> <!-- Show SQL in console -->
+        <property name="format_sql">true</property> <!-- Show SQL formatted -->
+        <mapping class="org.educa.entity.EstadoProductoEntity"/>
+        <mapping class="org.educa.entity.ColeccionEntity"/>
+        <mapping class="org.educa.entity.ClienteEntity"/>
+        <mapping class="org.educa.entity.DireccionEntity"/>
+        <mapping class="org.educa.entity.EstadoPedidoEntity"/>
+        <mapping class="org.educa.entity.PedidoEntity"/>
+        <mapping class="org.educa.entity.ProductoEntity"/>
+        <mapping class="org.educa.entity.TipoProductoEntity"/>
+        <mapping class="org.educa.entity.HistoricoPedidoEntity"/>
+    </session-factory>
+</hibernate-configuration>
